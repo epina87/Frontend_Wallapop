@@ -1,0 +1,28 @@
+.advert {
+  /* border: solid 1px lightgray; */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  
+}
+
+.advert .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advert article{
+  margin: 10px;
+  border-top: solid 2px #00b8de;
+}
+
+.advert img {
+  width: 250px;
+  height: 150px;
+}
+
+a {
+  text-decoration:none; 
+  color: #00b8de ;
+}
