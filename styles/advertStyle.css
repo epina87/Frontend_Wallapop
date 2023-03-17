@@ -1,28 +1,65 @@
-.advert {
-  /* border: solid 1px lightgray; */
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+#grid-wrapper{
+			--auto-grid-min-size: 16rem;
+			display: grid;
+			grid-gap: 2rem;
+			grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+
+		}
+		#grid-wrapper article{
+		
+      
+			color: #ffffff;
+			font-size: 1rem;
+			list-style-type: none;
+			padding: 5rem 1rem;
+			text-align: center;
+			text-transform: capitalize;
+      font-weight: 600;
+      border-radius: 5px;
+      background-color: #c7c9cb;
+
+  
+		}
+		.main-container{
+			margin: 0 auto;
+			max-width: 1170px;
+			padding:2rem 1rem;
+		}
+
+    .advert img {
+      width: 250px;
+      height: 150px;
+    }
+
+.user-info img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
   
 }
 
-.advert .user-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.advert article{
-  margin: 10px;
-  border-top: solid 2px #00b8de;
-}
-
-.advert img {
-  width: 250px;
-  height: 150px;
-}
-
-a {
+a, #closeSession {
   text-decoration:none; 
-  color: #00b8de ;
+  color: black;
 }
+
+.user-actions a, #closeSession{
+  border: 0.5px solid  #c7c9cb ;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+
+
+}
+
+
+

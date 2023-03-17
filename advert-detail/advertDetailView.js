@@ -13,19 +13,8 @@ export const buildAdvertDetail = (advert) => {
         `
   }
 
-export function buildSpinnerView() {
-    return ` 
-    <div class="container"> 
-        <div class="cargando">
-            <div class="pelotas"></div>
-            <div class="pelotas"></div>
-            <div class="pelotas"></div>
-            <span class="texto-cargando">Cargando...</span>
-        </div>
-    </div> 
-    `
-  }
+
 
   export function buildEmptyAdvertList(){
-    return `<p>No existen resultados disponibles</p>`;    
+    return `<p>No results available</p>`;    
 }

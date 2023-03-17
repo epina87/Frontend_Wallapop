@@ -1,6 +1,6 @@
 import { advertCreate } from "./advertCreate.js";
 import { pubSub } from '../utils/pubSub.js';
-import { buildSpinnerView } from "./advertCreateView.js";
+import { buildSpinnerView } from '../spinner/spinnerView.js';
 
 export const advertCreateController =async (advertCreateFormElement)=>{
     advertCreateFormElement.addEventListener('submit', async (event)=>{

@@ -1,7 +1,7 @@
 import { isEmailValid } from '../utils/isEmailValid.js';
 import { loginUser } from './login.js';
 import { pubSub } from '../utils/pubSub.js';
-import { buildSpinnerView } from './loginView.js';
+import { buildSpinnerView } from '../spinner/spinnerView.js';
 
 export function loginController(loginElement){
 
@@ -9,13 +9,13 @@ export function loginController(loginElement){
     event.preventDefault();
 
     const emailElement = loginElement.querySelector('#username');
-    const copyEmailElement = emailElement
-    loginElement.innerHTML = buildSpinnerView(); 
+    
+    
         
     if (!isEmailValid(emailElement.value)) {
       pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'Email inválido')
     } else {
-      await logUser(copyEmailElement)
+      await logUser(loginElement)
     }
 
     hideSpinner(loginElement)
@@ -28,6 +28,7 @@ export function loginController(loginElement){
     const username = formData.get('username')
     const password = formData.get('password')
 
+    loginElement.innerHTML = buildSpinnerView(); 
     
     try {
       const jwt = await loginUser(username, password)

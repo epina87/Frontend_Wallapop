@@ -7,42 +7,58 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./styles/spinner.css">
-    <link rel="stylesheet" href="./styles/advertStyle.css">
+    <link rel="stylesheet" href="./styles/styleLogSign.css">
     <script type="module" src="./advert-create/index.js"></script>
 
 </head>
 <body>
-    <h1> Creción de Anuncio</h1>
-    <section class="notifications"></section>
+    <div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <h1 class="card-title text-center">
+                    Ad Creation</h1>
+                <div class="card-text">
 
-    <form id="advertCreatForm">
-        <label for="foto">Foto</label>
-        <input type="text" name="foto" id="foto">
-        <br>
-    
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" required>
-        <br>
-    
-        <textarea name="descripcion" id="descripcion" cols="30" rows="5" required></textarea>
-        <br>
+                    <section class="notifications"></section>
 
-        <label for="precio">Precio</label>
-        <input type="number" step=".01" name="precio" id="precio" required>
-        <br>
-        <label for="tipo">Tipo</label>
+                    <form id="advertCreatForm">
+                        <label for="foto">Image</label>
+                        <br>
+                        <input type="text" name="foto" id="foto">
+                        <br><br>
+                    
+                        <label for="nombre">Name</label>
+                        <br>
+                        <input type="text" name="nombre" id="nombre" required>
+                        <br><br>
+                        
+                        <label for="descripcion">Description</label>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="5" required></textarea>
+                        <br>
+                        <br>
 
-        <input type="text" multiple name="tipo" id="tipo" list="listTipo" required/>
+                        <label for="precio">Price</label>
+                        <br>
+                        <input type="number" step=".01" name="precio" id="precio" required>
+                        <br><br>
+                        <label for="tipo">Type</label>
+                        <br>
+                        <input type="text" multiple name="tipo" id="tipo" list="listTipo" required/>
 
-        <datalist id="listTipo">
+                        <datalist id="listTipo">
 
-            <option value="compra">compra</option>
-            <option value="venta">venta</option>
-           
-        </datalist>
+                            <option value="compra">compra</option>
+                            <option value="venta">venta</option>
+                        
+                        </datalist>
 
-        <br><button type="submit">Crear Anuncio</button>
-    </form>
+                        <br><button type="submit" class="btn" >Crear Anuncio</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>  
     
 </body>
 </html>

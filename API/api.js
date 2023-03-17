@@ -4,7 +4,7 @@ export async function getListAPI(URL){
     const response = await fetch(URL);
     
     if (!response.ok) {
-        throw new Error('Registros solicitado no existen')
+        throw new Error('Records requested do not exist')
       }
     const responseJSON = await response.json();
     
@@ -21,7 +21,7 @@ export async function createNewUser(URL,user){
   })
 
   if (!response.ok){
-      throw new Error("Error al crear el usuario")
+      throw new Error("Error creating user")
   }
 }
 
@@ -35,7 +35,7 @@ export async function loginFetchUser(URL,user){
   })
 
   if (!response.ok) {
-    throw new Error('Error al identificar el usuario')
+    throw new Error('Error identifying the user')
   }
 
   return response
@@ -55,7 +55,7 @@ export async function advertNewCreate(newUrl,newAdvert,token){
   })
 
   if (!response.ok) {
-    throw new Error('creando anuncio')
+    throw new Error('Error creating ad')
   }
 
 }

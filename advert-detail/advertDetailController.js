@@ -1,6 +1,7 @@
 import { pubSub } from "../utils/pubSub.js";
 import { getAdvertsById } from "./advertDetail.js";
-import { buildAdvertDetail,buildEmptyAdvertList,buildSpinnerView } from "./advertDetailView.js";
+import { buildAdvertDetail,buildEmptyAdvertList } from "./advertDetailView.js";
+import { buildSpinnerView } from '../spinner/spinnerView.js';
 
 export const advertDetailController = async(advertDetailElement, adsId)=>{
     advertDetailElement.innerHTML = buildSpinnerView(); 
