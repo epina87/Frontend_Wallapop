@@ -6,13 +6,13 @@ export const advertDetailController = async(advertDetailElement, adsId)=>{
     advertDetailElement.innerHTML = buildSpinnerView(); 
     try {
         const advert = await getAdvertsById(adsId)
-
+       
         if (Object.entries(advert).length > 0) {
             
             pubSub.publish(pubSub.TOPICS.SHOW_NOTIFICATION, 'El anuncio se carga correctamente')
         
             advertDetailElement.innerHTML = buildAdvertDetail(advert)
-
+          
          } else {
            paintEmptyMessage(advertListElement)
           }
@@ -26,7 +26,6 @@ export const advertDetailController = async(advertDetailElement, adsId)=>{
     function hideSpinner(advertDetailElement) {
         const spinnerElement = advertDetailElement.querySelector('.container');
 
-        console.log(spinnerElement)
         spinnerElement.classList.add('hide');
       }
 

@@ -24,7 +24,6 @@ export function buildEmptyAdvertList(){
 }
 
 export function buildSpinnerView() {
-
     return ` 
     <div class="container">
         <div class="cargando">

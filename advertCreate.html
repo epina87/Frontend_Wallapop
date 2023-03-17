@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/spinner.css">
+    <link rel="stylesheet" href="./styles/advertStyle.css">
+    <script type="module" src="./advert-create/index.js"></script>
+
+</head>
+<body>
+    <h1> Creción de Anuncio</h1>
+    <section class="notifications"></section>
+
+    <form id="advertCreatForm">
+        <label for="foto">Foto</label>
+        <input type="text" name="foto" id="foto">
+        <br>
+    
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br>
+    
+        <textarea name="descripcion" id="descripcion" cols="30" rows="5" required></textarea>
+        <br>
+
+        <label for="precio">Precio</label>
+        <input type="number" step=".01" name="precio" id="precio" required>
+        <br>
+        <label for="tipo">Tipo</label>
+
+        <input type="text" multiple name="tipo" id="tipo" list="listTipo" required/>
+
+        <datalist id="listTipo">
+
+            <option value="compra">compra</option>
+            <option value="venta">venta</option>
+           
+        </datalist>
+
+        <br><button type="submit">Crear Anuncio</button>
+    </form>
+    
+</body>
+</html>

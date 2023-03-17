@@ -43,5 +43,22 @@ export async function loginFetchUser(URL,user){
   
 }
 
+export async function advertNewCreate(newUrl,newAdvert,token){
+
+  const response = await fetch(newUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      "Authorization": `Bearer ${token}`,
+    },
+    body: JSON.stringify(newAdvert)
+  })
+
+  if (!response.ok) {
+    throw new Error('creando anuncio')
+  }
+
+}
+
  
 

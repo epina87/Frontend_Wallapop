@@ -7,13 +7,17 @@
   <title>Login</title>
   
   <link rel="stylesheet" href="./styles/spinner.css">
-  <link rel="stylesheet" href="./styles/advertStyle.css">
+  
+  <link rel="stylesheet" href="./styles/styleLogSign.css">
 
   <script type="module" src="./login/index.js"></script>
 </head>
 <body>
 
-  <section class="notifications"></section>
+
+ 
+<!--
+   <section class="notifications"></section>
 
   <form id="logUser">
     <label for="username">Email</label>
@@ -27,7 +31,37 @@
     <button type="submit">Login</button>
     <a href="./signup.html">¿No tienes cuenta? Crea una</a>
   </form>
+  -->
 
-  
+  <div class="global-container">
+    <div class="card login-form">
+    <div class="card-body">
+      <h1 class="card-title text-center">Login in Wallapop</h1>
+      <div class="card-text">
+
+        <section class="notifications"></section>
+
+        <form id="logUser">
+          <p>
+            <label for="username" >Email</label>
+            <br>
+            <input type="email" name="username" id="username" required>
+          </p>  
+          <p>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" id="password" minlength="6" required>
+          </p>
+            <button type="submit"class="btn btn-primary btn-block">Sign in</button>
+            <div class="sign-up">
+              Don't have an account? <a href="./signup.html">Create One</a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
 </body>
 </html>
