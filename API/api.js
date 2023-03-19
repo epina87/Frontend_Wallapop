@@ -60,5 +60,25 @@ export async function advertNewCreate(newUrl,newAdvert,token){
 
 }
 
+
+export async function deleteAdvertApi(deleteUrl,token){
+
+  const response = await fetch(deleteUrl, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      "Authorization": `Bearer ${token}`,
+    }
+  })
+
+  console.log(response)
+
+  if (!response.ok) {
+    throw new Error('Error delete ad')
+  }
+
+}
+
+
  
 

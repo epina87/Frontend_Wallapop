@@ -10,6 +10,9 @@ export const buildAdvertDetail = (advert) => {
     <p> Priece: ${advert.price} € </p>
     <p> Type: ${advert.type}  </p>
     <p> Date: ${advertDate.toLocaleDateString()} </p> 
+
+    <button id="deleteAdvert" class="btn">Delete Ad</button>
+
         `
   }
 
